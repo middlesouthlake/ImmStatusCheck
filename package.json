@@ -1,0 +1,24 @@
+{
+    "name": "ImmStatusCheck",
+    "version": "1.0.0",
+    "description": "Check the immigration status from Canada Immigration Website.",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "keywords": [
+        "immigration status",
+        "async"
+    ],
+    "author": "Brian Li",
+    "license": "Apache-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/middlesouthlake/ImmStatusCheck.git"
+    },
+    "dependencies": {
+        "koa": "2.0.0",
+        "koa-bodyparser": "3.2.0",
+        "koa-router": "7.0.0"
+    }
+}
