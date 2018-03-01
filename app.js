@@ -7,6 +7,7 @@ const fs = require('fs');
 
 const app = new Koa();
 
+var httpPort = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
 // log request URL:
 app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
@@ -23,8 +24,8 @@ app.use(bodyParser());
 // add controller:
 app.use(controller());
 
-http.createServer(app.callback()).listen(8080);
-console.log('app started at port 8080...');
+http.createServer(app.callback()).listen(httpPort);
+console.log('app started at port '+httpPort+'...');
 // SSL options 
 try{
     var options = {
