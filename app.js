@@ -10,6 +10,10 @@ const app = new Koa();
 // log request URL:
 app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
+    // index page 
+    if (ctx.request.path === '/') {
+        ctx.body = "hello world from " + ctx.request.url;
+    }
     await next();
 });
 
@@ -26,7 +30,7 @@ var options = {
   }
 
 //http.createServer(app.callback()).listen(80);
-//http.createServer(app.callback()).listen(3000);
+http.createServer(app.callback()).listen(8080);
 https.createServer(options, app.callback()).listen(9090);
 //app.listen(3000);
-console.log('security app started at port 9090...');
+console.log('security app started at port 8080/9090...');
