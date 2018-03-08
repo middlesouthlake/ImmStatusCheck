@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-size: 100%;
+                padding: 40pt;
+                margin: 30pt;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Canada Immigration Application Status Check</h1>
+        <form action="/api/statuscheck" method="POST">
+            Application Number:
+            <input type="password" name="appid"><br><br>
+            User Surname:
+            <input type="text" name="surname"><br><br>
+            Birthday:
+            <input type="date" name="birthday"><br><br>
+            Country of Birth:
+            <select name="cob">
+                <option value="China">China</option>
+                <option value="HongKong">HongKong</option>
+                <option value="Macao">Macao</option>
+            </select><br><br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form> 
+    </body>
+</html>
