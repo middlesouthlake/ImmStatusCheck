@@ -13,6 +13,8 @@ async function getImmStatus(appId, surname, birthDate, birthCountry) {
     options.addArguments('--headless');
     options.addArguments('--disable-gpu');
     options.addArguments('--window-size=1280,960');
+    options.addArguments('--no-sandbox');
+
 
     let status;
     let driver;
