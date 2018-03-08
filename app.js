@@ -13,7 +13,8 @@ app.use(async (ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
     // index page 
     if (ctx.request.path === '/') {
-        ctx.body = "hello world from " + ctx.request.url;
+        ctx.response.type = 'html';
+        ctx.response.body = fs.createReadStream('./index.html');   
     }
     await next();
 });
