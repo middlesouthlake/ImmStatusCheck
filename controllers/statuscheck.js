@@ -8,7 +8,8 @@ module.exports = {
         ctx.response.type = 'application/json';
         // set Response Body:
         ctx.response.body = {
-            products: "Decision Made."
+            brief: "Failed.",
+            details: "Please use POST method."
         };
     },
     'POST /api/statuscheck': async (ctx, next) => {
