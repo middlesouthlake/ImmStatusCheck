@@ -4,6 +4,7 @@
     "description": "Check the immigration status from Canada Immigration Website.",
     "main": "app.js",
     "scripts": {
+        "dev": "nodemon --ignore node_modules/ app.js",
         "start": "node app.js"
     },
     "keywords": [
@@ -17,8 +18,17 @@
         "url": "https://github.com/middlesouthlake/ImmStatusCheck.git"
     },
     "dependencies": {
+	    "selenium-webdriver": "^4.0.0-alpha.1",
+	    "chromedriver": "^2.35.0",
         "koa": "2.0.0",
         "koa-bodyparser": "3.2.0",
         "koa-router": "7.0.0"
-    }
+    },
+    "devDependencies": {
+        "nodemon": "*"
+      },
+      "engine": {
+        "node": "*",
+        "npm": "*"
+      }
 }
