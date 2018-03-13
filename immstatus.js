@@ -26,6 +26,7 @@ async function getImmStatus(appId, surname, birthDate, birthCountry) {
             .build();
             
         await driver.get('https://services3.cic.gc.ca/ecas/security.do?lang=en&_ga=2.36017702.783948421.1515458672-1945924788.1512770655');
+        console.log("Page title is:"+ await driver.getTitle());
         const termCheckbox = await driver.wait(
             until.elementLocated(By.xpath("//input[@id='agree']")), 20000);
         await termCheckbox.click();
