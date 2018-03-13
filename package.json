@@ -18,9 +18,9 @@
         "url": "https://github.com/middlesouthlake/ImmStatusCheck.git"
     },
     "dependencies": {
-	    "selenium-webdriver": "^4.0.0-alpha.1",
-        "chromedriver": "^2.35.0",
         "chromium": "^1.0.2",
+        "chromedriver": "^2.35.0",
+	    "selenium-webdriver": "^4.0.0-alpha.1",
         "koa": "2.0.0",
         "koa-bodyparser": "3.2.0",
         "koa-router": "7.0.0"
