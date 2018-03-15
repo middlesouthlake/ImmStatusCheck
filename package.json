@@ -4,7 +4,7 @@
     "description": "Check the immigration status from Canada Immigration Website.",
     "main": "app.js",
     "scripts": {
-        "dev": "nodemon --ignore node_modules/ app.js",
+        "//": "dev": "nodemon --ignore node_modules/ app.js",
         "start": "node app.js"
     },
     "keywords": [
@@ -26,7 +26,7 @@
         "koa-router": "7.0.0"
     },
     "devDependencies": {
-        "nodemon": "*"
+        "//": "nodemon": "*"
       },
       "engine": {
         "node": "*",
