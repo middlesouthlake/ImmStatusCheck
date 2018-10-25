@@ -1,0 +1,24 @@
+build a docker build and use it in openshift online 3
+
+1. create docker image
+sudo ~/workspace/s2i build ./test/ImmStatus/ centos/nodejs-8-centos7 immstatus-app
+
+2. run shell in a docker image
+sudo docker run -u 0 -it --privileged -p 8080:8080 immstatus-app bash
+
+3. download chrome and install it
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+yum -y localinstall google-chrome-stable_current_x86_64.rpm 
+
+4. install Xvfb and run it
+yum install -y Xvfb
+Xvfb :1 -screen 0 1024x768x24 &
+export DISPLAY=:1.0     ( note you can change display number)
+
+5. run
+docker run -p 8080:8080 immstatus-app
+
+6. push docker image to docker hub
+  $ sudo docker login
+  $ sudo docker tag immstatus-app middlesouthlake/immstatuscheck
+
